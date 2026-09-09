@@ -103,13 +103,9 @@ Description:
 ## Extra Curricular Activities
 
 ### Leadership in University
-*Nov 2017 – Nov 2020 - Communist Youth Union & Students' Association*
+*2017 – 2020*
 
-- Deputy Secretary of Youth Union and Leader of Students' Association of Faculty
-- Leader to organize Careers Expo for pre- and under-graduates (Oct 2021)
-- Organize academic competitions, voluntary campaigns and events: Reunion Day for Alumni, Tech Day for freshmen, etc
-- MC in Academic Contest "Chemical Storm" (2019, 2020, 2021) and others
-- Leading in recurring volunteer campaign: Spring & Green Summer Campaign
+Deputy Secretary of the Youth Union & Faculty Students' Association; organized a Careers Expo, academic contests and volunteer campaigns.
 
 ---
 

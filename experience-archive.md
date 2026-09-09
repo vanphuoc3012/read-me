@@ -48,3 +48,16 @@ embedded Vue.js.
   Payroll, etc.) using Java, Spring Boot, Spring Data JPA.
 - Set up a CI/CD pipeline (Jenkins, Docker, Apache on CentOS) for the test environment.
 - Worked on a BigCommerce admin site (Madive) and took part in team code reviews.
+
+---
+
+## Leadership in University (Extra Curricular) — full detail
+*Nov 2017 – Nov 2020 — Communist Youth Union & Students' Association*
+
+- Deputy Secretary of Youth Union and Leader of Students' Association of Faculty.
+- Leader to organize Careers Expo for pre- and under-graduates (Oct 2021).
+- Organized academic competitions, voluntary campaigns and events: Reunion Day for Alumni, Tech Day for freshmen, etc.
+- MC in Academic Contest "Chemical Storm" (2019, 2020, 2021) and others.
+- Leading in recurring volunteer campaign: Spring & Green Summer Campaign.
+
+*(Condensed to ~2 lines in the final CV.)*
