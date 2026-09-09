@@ -30,6 +30,17 @@ embedded Vue.js.
 
 ---
 
+## Technician — C&CLaptop Service and Trading Co., LTD.
+*02/2021 – 09/2022*
+
+- Provided support services to resolve customer issues related to computers.
+- Installed, serviced and upgraded Windows computers.
+- Used remote access to perform troubleshooting when needed.
+
+*(Removed from the final CV — hardware/IT-support role, not software/data engineering. Kept here in case it is needed again.)*
+
+---
+
 ## Condensed version (candidate for the final CV)
 
 **Java Developer** — Shinhan DS Vietnam Ltd · *04/2023 – 10/2023*

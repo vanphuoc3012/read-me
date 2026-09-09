@@ -4,7 +4,7 @@
 ## Profile
 
 - **Email:** vanphuoc3012@gmail.com
-- **Phone:** (+84) 344 441 5562
+- **Phone:** (+84) 34 441 5562
 - **LinkedIn:** LinkedIn
 - **Location:** Binh Thanh, HCMC
 - **Github:** Github
@@ -47,13 +47,6 @@ GPA: 8.0/10
 - Server side rendering web using: Java, Thymeleaf, HTML, jQuery, Bootstrap
 - Build small project with team of 5 members
 - Learning new technology: Docker, Redis, Microservices
-
-### Technician
-*02/2021 – 09/2022 - C&CLaptop Service and Trading Co., LTD.*
-
-- Provided support services to resolve customer issues related to computer.
-- Installed, serviced and upgraded Windows computers.
-- Used remote access to perform troubleshooting when needed.
 
 ---
 
