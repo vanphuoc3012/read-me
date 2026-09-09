@@ -34,27 +34,11 @@ GPA: 8.0/10
 ## Experience
 
 ### Java Developer
-*04/2023 – current – Shinhan DS Vietnam Ltd*
+*04/2023 – 10/2023 – Shinhan DS Vietnam Ltd*
 
-**Responsibilities:**
-- Did work-breakdown structure for User Story, defined impact, implemented new features.
-- Coordinated with the customer support team to analyze and fixed incidents in production.
-- Did code review together in the team.
-
-**Project:**
-
-▶ **HRMS:**
-Internal Human Resources Management System. It's a complete HRMS solution with some key modules like Employee Management, Security Check, Leave and Attendance, Hiring, Payroll.
-
-My task:
-- Design backend API (Java, Spring Boot, Spring Data JPA)
-- Build CI/CD pipeline for test environment using Jenkins, Docker, Apache on CentOS
-- Install server software: Jenkins, MySQL, Docker, Apache …
-
-▶ **Madive:**
-Madive is an administrator site designed for managing companies that utilize the BigCommerce platform.
-
-My task: collaborated with other member to analyze requirements and developing server-side rendering web application using Java, Spring, MyBatis and embbed Vue.js
+- Built backend APIs for an internal HRMS (Employee Management, Leave & Attendance, Payroll, etc.) using Java, Spring Boot, Spring Data JPA.
+- Set up a CI/CD pipeline (Jenkins, Docker, Apache on CentOS) for the test environment.
+- Worked on a BigCommerce admin site (Madive) and took part in team code reviews.
 
 ### Developer Internship
 *12/2022 – 03/2023 - LIKELION Co., LTD.*
