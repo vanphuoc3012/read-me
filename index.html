@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ho Van Phuoc — CV</title>
+  <meta name="description" content="Curriculum Vitae of Ho Van Phuoc" />
+  <style>
+    :root { --accent: #1F5C99; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background: #f4f6f8;
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 20px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.5px; }
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    main { padding: 16px; max-width: 1000px; margin: 0 auto; }
+    .viewer {
+      width: 100%;
+      height: 85vh;
+      border: 1px solid #d0d5da;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    footer { text-align: center; color: #888; font-size: 0.8rem; padding: 16px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ho Van Phuoc — Curriculum Vitae</h1>
+    <a class="btn" href="CV-HO-VAN-PHUOC.pdf" download>Download PDF</a>
+  </header>
+  <main>
+    <iframe class="viewer" src="CV-HO-VAN-PHUOC.pdf" title="CV of Ho Van Phuoc"></iframe>
+    <p style="text-align:center">
+      If the CV does not display above,
+      <a href="CV-HO-VAN-PHUOC.pdf">open it directly</a>.
+    </p>
+  </main>
+  <footer>Built automatically from LaTeX via GitHub Actions.</footer>
+</body>
+</html>

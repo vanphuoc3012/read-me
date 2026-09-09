@@ -1,0 +1,56 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'CV-HO-VAN-PHUOC.tex'
+      - 'index.html'
+      - '.github/workflows/build-cv.yml'
+  workflow_dispatch:
+
+# Allow the workflow to publish to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one concurrent Pages deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile CV (xelatex)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV-HO-VAN-PHUOC.tex
+          latexmk_use_xelatex: true
+
+      - name: Assemble site
+        run: |
+          mkdir -p public
+          cp CV-HO-VAN-PHUOC.pdf public/
+          cp index.html public/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

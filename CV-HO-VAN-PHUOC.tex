@@ -1,0 +1,164 @@
+%==============================================================
+%  HO VAN PHUOC - Curriculum Vitae
+%  Compile:  xelatex CV-HO-VAN-PHUOC.tex   (or run ./build.sh)
+%==============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.1cm,bottom=1.1cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{paracol}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{2pt}
+
+%---------------- Colors -------------------------------------
+\definecolor{accent}{HTML}{1F5C99}   % blue for headings/name
+\definecolor{muted}{HTML}{555555}     % grey for dates/subtitles
+
+%---------------- Hyperlink style ----------------------------
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+%---------------- Section headings ---------------------------
+\titleformat{\section}
+  {\color{accent}\large\bfseries\scshape}{}{0pt}{}[\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% Sidebar section (no rule, tighter)
+\newcommand{\sidesection}[1]{%
+  \par\medskip{\color{accent}\large\bfseries\scshape #1}\par
+  {\color{accent}\rule{\linewidth}{0.4pt}}\par\smallskip}
+
+%---------------- Helpers ------------------------------------
+% Job/role entry: {Title}{Dates}{Company}
+\newcommand{\role}[3]{%
+  \textbf{#1}\par
+  {\color{muted}\small #2 \textbullet{} #3}\par\vspace{2pt}}
+
+% Tight bullet list
+\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, topsep=1pt, parsep=0pt}
+
+\newcommand{\entrytitle}[1]{\smallskip\textbf{#1}\par}
+
+\pagestyle{empty}
+\setlength{\columnsep}{1.2cm}
+
+%==============================================================
+\begin{document}
+
+%---------------- Header -------------------------------------
+\begin{center}
+  {\color{accent}\Huge\bfseries\scshape HO VAN PHUOC}\\[3pt]
+  {\color{muted}\large Java Developer}
+\end{center}
+\vspace{2pt}
+
+%---------------- Two-column body ----------------------------
+\columnratio{0.66}
+\begin{paracol}{2}
+
+%================= LEFT COLUMN ===============================
+\section*{}
+\section{Education}
+\textbf{Bach Khoa University, Ho Chi Minh City (2024--present)}\par
+Master of Computer Science (in progress)\par
+\smallskip
+\textbf{Bach Khoa University, Ho Chi Minh City (2017--2022)}\par
+Bachelor of Chemical Engineering\par
+GPA: 8.0/10
+
+\section{Experience}
+\role{Java Developer}{04/2023 -- current}{Shinhan DS Vietnam Ltd}
+\textbf{Responsibilities:}
+\begin{itemize}
+  \item Did work-breakdown structure for User Story, defined impact, implemented new features.
+  \item Coordinated with the customer support team to analyze and fix incidents in production.
+  \item Did code review together in the team.
+\end{itemize}
+\textbf{Projects:}
+\begin{itemize}[label=\textcolor{accent}{\faCaretRight}]
+  \item \textbf{HRMS:} Internal Human Resources Management System --- a complete HRMS solution with key modules like Employee Management, Security Check, Leave and Attendance, Hiring, Payroll.
+  \begin{itemize}[label=--]
+    \item Design backend API (Java, Spring Boot, Spring Data JPA)
+    \item Build CI/CD pipeline for test environment using Jenkins, Docker, Apache on CentOS
+    \item Install server software: Jenkins, MySQL, Docker, Apache
+  \end{itemize}
+  \item \textbf{Madive:} an administrator site for managing companies that utilize the BigCommerce platform. Collaborated with team members to analyze requirements and develop a server-side rendering web application using Java, Spring, MyBatis and embedded Vue.js.
+\end{itemize}
+
+\role{Developer Internship}{12/2022 -- 03/2023}{LIKELION Co., LTD.}
+\begin{itemize}
+  \item Contribute to Spring Boot web application development.
+  \item Server-side rendering web using Java, Thymeleaf, HTML, jQuery, Bootstrap.
+  \item Build small project with team of 5 members.
+  \item Learning new technology: Docker, Redis, Microservices.
+\end{itemize}
+
+\role{Technician}{02/2021 -- 09/2022}{C\&CLaptop Service and Trading Co., LTD.}
+\begin{itemize}
+  \item Provided support services to resolve customer issues related to computers.
+  \item Installed, serviced and upgraded Windows computers.
+  \item Used remote access to perform troubleshooting when needed.
+\end{itemize}
+
+\section{Personal Projects}
+\entrytitle{Chat Application}
+\begin{itemize}
+  \item Github: \url{https://github.com/vanphuoc3012/chat-application}
+  \item A realtime Chat Application: send messages, create chat groups.
+  \item RabbitMQ as STOMP broker; Redis as in-memory session store.
+\end{itemize}
+{\small\itshape Environment: Java 11, Spring Boot, Docker, RabbitMQ, Redis, Oracle Database}
+
+\entrytitle{Ecommerce -- Laptop shopping website}
+\begin{itemize}
+  \item Github: \url{https://github.com/vanphuoc3012/xplaptop_web}
+  \item A shopping website that lets customers browse products and place orders.
+  \item An admin application for managing users, categories, brands, products, customers, orders and sales reports.
+\end{itemize}
+{\small\itshape Environment: Java 11, Spring Boot, MySQL}
+
+%================= COLUMN BREAK =============================
+\switchcolumn
+
+%================= RIGHT COLUMN (SIDEBAR) ==================
+\sidesection{Profile}
+\begin{tabbing}
+\faEnvelope[regular]~ \= \href{mailto:vanphuoc3012@gmail.com}{vanphuoc3012@gmail.com}\\[3pt]
+\faPhone*~ \> (+84) 344 441 5562\\[3pt]
+\faLinkedin~ \> \href{https://www.linkedin.com/}{LinkedIn}\\[3pt]
+\faMapMarker*~ \> Binh Thanh, HCMC\\[3pt]
+\faGithub~ \> \href{https://github.com/vanphuoc3012}{Github}
+\end{tabbing}
+
+\sidesection{Skills}
+\textbf{Programming Language:} Java 11\par\smallskip
+\textbf{Framework \& tools:} Spring, Hibernate, Apache\par\smallskip
+\textbf{RDBMS:} MySQL\par\smallskip
+\textbf{CI/CD tools:} Jenkins, Docker, Jfrog\par\smallskip
+\textbf{Others:} Git, CCNA\par\smallskip
+\textbf{Languages:} Vietnamese, English
+
+\sidesection{Extra Curricular}
+\textbf{Leadership in University}\par
+{\color{muted}\small Nov 2017 -- Nov 2020 \textbullet{} Communist Youth Union \& Students' Association}
+\begin{itemize}
+  \item Deputy Secretary of Youth Union and Leader of Students' Association of Faculty.
+  \item Organized Careers Expo for pre- and under-graduates (Oct 2021).
+  \item Organized academic competitions, voluntary campaigns and events (Reunion Day for Alumni, Tech Day for freshmen).
+  \item MC in Academic Contest ``Chemical Storm'' (2019--2021).
+  \item Led recurring volunteer campaigns: Spring \& Green Summer Campaign.
+\end{itemize}
+
+\sidesection{Achievements \& Certificates}
+\begin{itemize}[label=\textcolor{accent}{\faTrophy}]
+  \item \textbf{Jun 2022} --- Completed CCNA class at VNPRO Center.
+  \item \textbf{Apr 2018} --- 1st prize, National Chemistry Olympiad for Students 2018.
+\end{itemize}
+
+\end{paracol}
+\end{document}

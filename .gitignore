@@ -1,0 +1,12 @@
+# Local working notes built from private MoMo git history — never commit
+momo-work/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
