@@ -4,8 +4,8 @@
 %==============================================================
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}   % OpenType LM: has Vietnamese glyphs
 \usepackage[top=1.1cm,bottom=1.1cm,left=1.4cm,right=1.4cm]{geometry}
 \usepackage{xcolor}
 \usepackage{titlesec}
@@ -53,7 +53,7 @@
 %---------------- Header -------------------------------------
 \begin{center}
   {\color{accent}\Huge\bfseries\scshape HO VAN PHUOC}\\[3pt]
-  {\color{muted}\large Java Developer}
+  {\color{muted}\large Software / Data Platform Engineer}
 \end{center}
 \vspace{2pt}
 
@@ -72,6 +72,36 @@ Bachelor of Chemical Engineering\par
 GPA: 8.0/10
 
 \section{Experience}
+\role{Software Engineer $\rightarrow$ Data Platform / Cloud Infrastructure Engineer}{Nov 2023 -- present}{MoMo (M\_Service JSC), Vietnam}
+Started as a junior software engineer building app features, then moved into designing and running MoMo's data platform used by many teams.
+
+\smallskip\textbf{Product work (early)}
+\begin{itemize}
+  \item Built MoMo's in-app \textbf{survey feature} end to end --- from the admin config to the screens shown in the MoMo app. Added question types (Radio, Dropdown, NPS), survey versions, next-question logic, reports with charts and export, and sent survey data to Kafka and StarRocks. \textit{(Kotlin, Kafka, StarRocks)}
+  \item Built the backend for the \textbf{Lắc Xì 2024} Tết game, made to handle \textbf{very high traffic and many users at the same time}: game logic, caching, a global lock, maintenance mode, event/chat sending, and a back-office config tool. \textit{(Vert.x, Kotlin, HBase, Redis, Kafka)}
+\end{itemize}
+
+\textbf{Data platform work}
+\begin{itemize}
+  \item \textbf{Designed the data platform architecture} --- how it is deployed, how the clusters are set up, and how people access data.
+  \item Was the \textbf{first engineer} to research and build the deployment pipeline for the data platform.
+  \item Also worked as a \textbf{DevOps engineer} for a while: supported CI/CD, networking, and troubleshooting of multi-cluster networking, and operated several open-source stacks (Postgres, VictoriaMetrics + Grafana).
+  \item Liked to \textbf{try and apply new tools} --- tested new open-source tech and brought the good ones into production for the company.
+  \item Brought an \textbf{open-source lakehouse} to the company (StarRocks, Apache Kyuubi, Spark, Iceberg, Gravitino, Hive Metastore) to run data pipelines and build a \textbf{feature mart} for ML.
+  \item Enabled \textbf{BI and blazing-fast, real-time dashboards} that help the business make decisions in real time.
+  \item \textbf{Helped many teams go live} --- set them up on the platform and gave them the tools and support to ship to production.
+  \item Set up and ran \textbf{multi-cluster Apache Flink} and streaming/CDC pipelines (Kafka, Debezium) for several teams.
+  \item Served many kinds of users --- developers, data analysts, data scientists and product owners.
+  \item Built easy \textbf{self-service data tools and MCP servers} (StarRocks, Grafana, VictoriaLogs) so AI tools and non-technical users can get data and insights on their own; also built an \textbf{AI agent} (Node/TypeScript) to query and explore the data platform.
+  \item Added \textbf{data security, access control and audit} to keep data safe.
+  \item Ran workloads on \textbf{Kubernetes across three clouds} --- GKE (GCP), EKS (AWS) and FPT Cloud --- managing node pools, Helm charts, ArgoCD and Kyverno.
+  \item Worked with \textbf{Bazel} to build and package services, and upgraded the whole \textbf{monorepo from Java 11 to Java 17} (build config + hundreds of dependencies).
+  \item Can set up a \textbf{full monitoring stack for Kubernetes} --- metrics, dashboards and alerts --- using VictoriaMetrics/VictoriaLogs and Grafana; managed secrets and access with SOPS and GCP Workload Identity.
+  \item Wrote platform services in \textbf{Kotlin, Go and Python}.
+\end{itemize}
+{\small\itshape Environment: Kotlin, Go, Python, TypeScript, Kubernetes (GKE/EKS/FPT Cloud), Helm, ArgoCD, Kyverno, Bazel, Pulumi, StarRocks, Kyuubi, Spark, Flink, Kafka, Debezium, Iceberg, Gravitino, HBase, Redis; GCP, AWS, FPT Cloud}
+
+\smallskip
 \role{Java Developer}{04/2023 -- 10/2023}{Shinhan DS Vietnam Ltd}
 \begin{itemize}
   \item Built backend APIs for an internal HRMS (Employee Management, Leave \& Attendance, Payroll, etc.) using Java, Spring Boot, Spring Data JPA.
@@ -113,17 +143,18 @@ GPA: 8.0/10
 \faEnvelope[regular]~ \= \href{mailto:vanphuoc3012@gmail.com}{vanphuoc3012@gmail.com}\\[3pt]
 \faPhone*~ \> (+84) 34 441 5562\\[3pt]
 \faLinkedin~ \> \href{https://www.linkedin.com/}{LinkedIn}\\[3pt]
-\faMapMarker*~ \> Binh Thanh, HCMC\\[3pt]
+\faMapMarker*~ \> Ho Chi Minh City\\[3pt]
 \faGithub~ \> \href{https://github.com/vanphuoc3012}{Github}
 \end{tabbing}
 
 \sidesection{Skills}
-\textbf{Programming Language:} Java 11\par\smallskip
-\textbf{Framework \& tools:} Spring, Hibernate, Apache\par\smallskip
-\textbf{RDBMS:} MySQL\par\smallskip
-\textbf{CI/CD tools:} Jenkins, Docker, Jfrog\par\smallskip
-\textbf{Others:} Git, CCNA\par\smallskip
-\textbf{Languages:} Vietnamese, English
+\textbf{Languages:} Java, Kotlin, Go, Python, TypeScript\par\smallskip
+\textbf{Data \& Lakehouse:} StarRocks, Spark, Kyuubi, Flink, Kafka, Iceberg\par\smallskip
+\textbf{Cloud \& DevOps:} Kubernetes (GKE/EKS), Docker, Helm, ArgoCD, Bazel, Pulumi\par\smallskip
+\textbf{Databases:} PostgreSQL, MySQL, Redis, HBase\par\smallskip
+\textbf{Monitoring:} VictoriaMetrics, Grafana\par\smallskip
+\textbf{Others:} Git, CI/CD, CCNA\par\smallskip
+\textbf{Spoken:} Vietnamese, English
 
 \sidesection{Extra Curricular}
 \textbf{Leadership in University}\par
