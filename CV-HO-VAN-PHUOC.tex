@@ -1,16 +1,15 @@
 %==============================================================
-%  HO VAN PHUOC - Curriculum Vitae
+%  HO VAN PHUOC - Curriculum Vitae  (single-column layout)
 %  Compile:  xelatex CV-HO-VAN-PHUOC.tex   (or run ./build.sh)
 %==============================================================
 \documentclass[10pt,a4paper]{article}
 
 \usepackage{fontspec}
 \setmainfont{Latin Modern Roman}   % OpenType LM: has Vietnamese glyphs
-\usepackage[top=1.1cm,bottom=1.1cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage[top=1.1cm,bottom=1.1cm,left=1.8cm,right=1.8cm]{geometry}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{paracol}
 \usepackage{fontawesome5}
 \usepackage{parskip}
 \usepackage[hidelinks]{hyperref}
@@ -26,12 +25,7 @@
 %---------------- Section headings ---------------------------
 \titleformat{\section}
   {\color{accent}\large\bfseries\scshape}{}{0pt}{}[\color{accent}\titlerule]
-\titlespacing*{\section}{0pt}{5pt}{3pt}
-
-% Sidebar section (no rule, tighter)
-\newcommand{\sidesection}[1]{%
-  \par\medskip{\color{accent}\large\bfseries\scshape #1}\par
-  {\color{accent}\rule{\linewidth}{0.4pt}}\par\smallskip}
+\titlespacing*{\section}{0pt}{7pt}{4pt}
 
 %---------------- Helpers ------------------------------------
 % Job/role entry: {Title}{Dates}{Company}
@@ -45,7 +39,6 @@
 \newcommand{\entrytitle}[1]{\smallskip\textbf{#1}\par}
 
 \pagestyle{empty}
-\setlength{\columnsep}{1.2cm}
 
 %==============================================================
 \begin{document}
@@ -53,23 +46,32 @@
 %---------------- Header -------------------------------------
 \begin{center}
   {\color{accent}\Huge\bfseries\scshape HO VAN PHUOC}\\[3pt]
-  {\color{muted}\large Software / Data Platform Engineer}
+  {\color{muted}\large Software / Data Platform Engineer}\\[6pt]
+  \small
+  \faEnvelope[regular]~\href{mailto:vanphuoc3012@gmail.com}{vanphuoc3012@gmail.com} \quad
+  \faPhone*~(+84) 34 441 5562 \quad
+  \faMapMarker*~Ho Chi Minh City \\[3pt]
+  \faLinkedin~\href{https://www.linkedin.com/}{LinkedIn} \quad
+  \faGithub~\href{https://github.com/vanphuoc3012}{github.com/vanphuoc3012}
 \end{center}
 \vspace{2pt}
 
-%---------------- Two-column body ----------------------------
-\columnratio{0.66}
-\begin{paracol}{2}
+%---------------- Body (single column) -----------------------
+\section{Skills}
+\textbf{Languages:} Java, Kotlin, Go, Python, TypeScript \quad
+\textbf{Databases:} PostgreSQL, MySQL, Redis, HBase\par\smallskip
+\textbf{Data \& Lakehouse:} StarRocks, Spark, Kyuubi, Flink, Kafka, Iceberg\par\smallskip
+\textbf{Cloud \& DevOps:} Kubernetes (GKE/EKS), Docker, Helm, ArgoCD, Bazel, Pulumi \quad
+\textbf{Monitoring:} VictoriaMetrics, Grafana\par\smallskip
+\textbf{Others:} Git, CI/CD, CCNA \quad
+\textbf{Spoken:} Vietnamese, English
 
-%================= LEFT COLUMN ===============================
-\section*{}
 \section{Education}
 \textbf{Bach Khoa University, Ho Chi Minh City (2024--present)}\par
 Master of Computer Science (in progress)\par
 \smallskip
 \textbf{Bach Khoa University, Ho Chi Minh City (2017--2022)}\par
-Bachelor of Chemical Engineering\par
-GPA: 8.0/10
+Bachelor of Chemical Engineering \textbullet{} GPA: 8.0/10
 
 \section{Experience}
 \role{Software Engineer $\rightarrow$ Data Platform / Cloud Infrastructure Engineer}{Nov 2023 -- present}{MoMo (M\_Service JSC), Vietnam}
@@ -134,37 +136,14 @@ Started as a junior software engineer building app features, then moved into des
 \end{itemize}
 {\small\itshape Environment: Java 11, Spring Boot, MySQL}
 
-%================= COLUMN BREAK =============================
-\switchcolumn
-
-%================= RIGHT COLUMN (SIDEBAR) ==================
-\sidesection{Profile}
-\begin{tabbing}
-\faEnvelope[regular]~ \= \href{mailto:vanphuoc3012@gmail.com}{vanphuoc3012@gmail.com}\\[3pt]
-\faPhone*~ \> (+84) 34 441 5562\\[3pt]
-\faLinkedin~ \> \href{https://www.linkedin.com/}{LinkedIn}\\[3pt]
-\faMapMarker*~ \> Ho Chi Minh City\\[3pt]
-\faGithub~ \> \href{https://github.com/vanphuoc3012}{Github}
-\end{tabbing}
-
-\sidesection{Skills}
-\textbf{Languages:} Java, Kotlin, Go, Python, TypeScript\par\smallskip
-\textbf{Data \& Lakehouse:} StarRocks, Spark, Kyuubi, Flink, Kafka, Iceberg\par\smallskip
-\textbf{Cloud \& DevOps:} Kubernetes (GKE/EKS), Docker, Helm, ArgoCD, Bazel, Pulumi\par\smallskip
-\textbf{Databases:} PostgreSQL, MySQL, Redis, HBase\par\smallskip
-\textbf{Monitoring:} VictoriaMetrics, Grafana\par\smallskip
-\textbf{Others:} Git, CI/CD, CCNA\par\smallskip
-\textbf{Spoken:} Vietnamese, English
-
-\sidesection{Extra Curricular}
+\section{Extra Curricular}
 \textbf{Leadership in University} {\color{muted}\small(2017--2020)}\par\smallskip
 Deputy Secretary of the Youth Union \& Faculty Students' Association; organized a Careers Expo, academic contests and volunteer campaigns.
 
-\sidesection{Achievements \& Certificates}
+\section{Achievements \& Certificates}
 \begin{itemize}[label=\textcolor{accent}{\faTrophy}]
   \item \textbf{Jun 2022} --- Completed CCNA class at VNPRO Center.
   \item \textbf{Apr 2018} --- 1st prize, National Chemistry Olympiad for Students 2018.
 \end{itemize}
 
-\end{paracol}
 \end{document}

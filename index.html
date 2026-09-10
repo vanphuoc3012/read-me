@@ -27,10 +27,10 @@
 
     /* The "paper" sheet */
     .page {
-      max-width: 900px;
+      max-width: 820px;
       margin: 0 auto;
       background: #fff;
-      padding: 40px 44px 48px;
+      padding: 40px 52px 48px;
       box-shadow: 0 3px 18px rgba(0,0,0,0.12);
       border-radius: 2px;
     }
@@ -67,17 +67,20 @@
       text-align: center;
       color: var(--muted);
       font-size: 1.15rem;
-      margin: 4px 0 18px;
+      margin: 4px 0 10px;
     }
-
-    /* Two-column layout */
-    .cols {
-      display: grid;
-      grid-template-columns: 1.9fr 1fr;
-      column-gap: 34px;
+    /* Contact line under header */
+    .contact {
+      text-align: center;
+      font-size: 0.92rem;
+      margin: 0 0 6px;
+      color: var(--ink);
     }
+    .contact span { white-space: nowrap; margin: 0 8px; }
+    .contact i { color: var(--accent); margin-right: 5px; }
+    .contact a { color: var(--accent); text-decoration: none; }
 
-    section { margin-bottom: 6px; }
+    section { margin-bottom: 4px; }
     h2 {
       color: var(--accent);
       font-variant: small-caps;
@@ -94,17 +97,6 @@
 
     ul { margin: 3px 0 6px; padding-left: 1.2em; }
     li { margin: 1px 0; }
-    ul.arrow { list-style: none; padding-left: 0; }
-    ul.arrow > li { position: relative; padding-left: 1.2em; margin-bottom: 5px; }
-    ul.arrow > li::before {
-      content: "\f0da"; /* fa-caret-right */
-      font-family: "Font Awesome 6 Free"; font-weight: 900;
-      color: var(--accent);
-      position: absolute; left: 0; top: 0.05em; font-size: 0.85em;
-    }
-    ul.dash { list-style: none; padding-left: 1em; }
-    ul.dash > li { position: relative; padding-left: 0.9em; }
-    ul.dash > li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
     ul.trophy { list-style: none; padding-left: 0; }
     ul.trophy > li { position: relative; padding-left: 1.5em; margin-bottom: 4px; }
     ul.trophy > li::before {
@@ -115,17 +107,12 @@
     }
     .env { font-style: italic; font-size: 0.86rem; color: #333; margin: 2px 0 8px; }
     a { color: var(--accent); }
-
-    /* Sidebar contact */
-    .contact { list-style: none; padding: 0; margin: 4px 0; }
-    .contact li { margin: 6px 0; display: flex; align-items: center; gap: 9px; }
-    .contact i { color: var(--accent); width: 18px; text-align: center; }
-    .skill { margin: 5px 0; }
+    .skill { margin: 4px 0; }
 
     @media (max-width: 680px) {
-      .cols { grid-template-columns: 1fr; }
       .page { padding: 26px 20px 32px; }
       .cv-name { font-size: 2rem; }
+      .contact span { display: inline-block; }
     }
 
     @media print {
@@ -141,128 +128,113 @@
   <div class="page">
     <h1 class="cv-name">Ho Van Phuoc</h1>
     <p class="cv-title">Software / Data Platform Engineer</p>
+    <p class="contact">
+      <span><i class="fa-regular fa-envelope"></i><a href="mailto:vanphuoc3012@gmail.com">vanphuoc3012@gmail.com</a></span>
+      <span><i class="fa-solid fa-phone"></i>(+84) 34 441 5562</span>
+      <span><i class="fa-solid fa-location-dot"></i>Ho Chi Minh City</span>
+      <span><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/">LinkedIn</a></span>
+      <span><i class="fa-brands fa-github"></i><a href="https://github.com/vanphuoc3012">github.com/vanphuoc3012</a></span>
+    </p>
 
-    <div class="cols">
-      <!-- LEFT COLUMN -->
-      <div class="main">
-        <section>
-          <h2>Education</h2>
-          <p><span class="label">Bach Khoa University, Ho Chi Minh City (2024–present)</span><br />
-          Master of Computer Science (in progress)</p>
-          <p><span class="label">Bach Khoa University, Ho Chi Minh City (2017–2022)</span><br />
-          Bachelor of Chemical Engineering<br />
-          GPA: 8.0/10</p>
-        </section>
+    <section>
+      <h2>Skills</h2>
+      <p class="skill"><span class="label">Languages:</span> Java, Kotlin, Go, Python, TypeScript</p>
+      <p class="skill"><span class="label">Data &amp; Lakehouse:</span> StarRocks, Spark, Kyuubi, Flink, Kafka, Iceberg</p>
+      <p class="skill"><span class="label">Cloud &amp; DevOps:</span> Kubernetes (GKE/EKS), Docker, Helm, ArgoCD, Bazel, Pulumi</p>
+      <p class="skill"><span class="label">Databases:</span> PostgreSQL, MySQL, Redis, HBase &nbsp;·&nbsp; <span class="label">Monitoring:</span> VictoriaMetrics, Grafana</p>
+      <p class="skill"><span class="label">Others:</span> Git, CI/CD, CCNA &nbsp;·&nbsp; <span class="label">Spoken:</span> Vietnamese, English</p>
+    </section>
 
-        <section>
-          <h2>Experience</h2>
+    <section>
+      <h2>Education</h2>
+      <p><span class="label">Bach Khoa University, Ho Chi Minh City (2024–present)</span><br />
+      Master of Computer Science (in progress)</p>
+      <p><span class="label">Bach Khoa University, Ho Chi Minh City (2017–2022)</span><br />
+      Bachelor of Chemical Engineering · GPA: 8.0/10</p>
+    </section>
 
-          <h3>Software Engineer → Data Platform / Cloud Infrastructure Engineer</h3>
-          <p class="meta">Nov 2023 – present • MoMo (M_Service JSC), Vietnam</p>
-          <p>Started as a junior software engineer building app features, then moved into designing and running MoMo's data platform used by many teams.</p>
-          <p class="label">Product work (early)</p>
-          <ul>
-            <li>Built MoMo's in-app <span class="label">survey feature</span> end to end, from the admin setup to the screens in the app. Added <span class="label">extensible question types</span>, survey versions, next-question logic, and reports with charts and export, and sent the survey data to Kafka and StarRocks. <em>(Kotlin, Kafka, StarRocks)</em></li>
-            <li>Built the backend for the <span class="label">Lắc Xì 2024</span> Tết game, made to handle <span class="label">very high traffic and many users at the same time</span>: game logic, caching, a global lock, maintenance mode, event/chat sending, and a back-office config tool. <em>(Vert.x, Kotlin, HBase, Redis, Kafka)</em></li>
-          </ul>
-          <p class="label">Data platform work</p>
-          <ul>
-            <li><span class="label">Designed the data platform architecture</span> — how it is deployed, how the clusters are set up, and how people access data.</li>
-            <li>Was the <span class="label">first engineer</span> to research and build the deployment pipeline for the data platform.</li>
-            <li>Also worked as a <span class="label">DevOps engineer</span> for a while: supported CI/CD, networking, and troubleshooting of multi-cluster networking, and operated several open-source stacks (Postgres, VictoriaMetrics + Grafana).</li>
-            <li>Liked to <span class="label">try and apply new tools</span> — tested new open-source tech and brought the good ones into production for the company.</li>
-            <li>Brought an <span class="label">open-source lakehouse</span> to the company (StarRocks, Apache Kyuubi, Spark, Iceberg, Gravitino, Hive Metastore) to run data pipelines and build a <span class="label">feature mart</span> for ML.</li>
-            <li>Enabled <span class="label">BI and blazing-fast, real-time dashboards</span> that help the business make decisions in real time.</li>
-            <li><span class="label">Helped many teams go live</span> — set them up on the platform and gave them the tools and support to ship to production.</li>
-            <li>Set up and ran <span class="label">multi-cluster Apache Flink</span> and streaming/CDC pipelines (Kafka, Debezium) for several teams.</li>
-            <li>Served many kinds of users — developers, data analysts, data scientists and product owners.</li>
-            <li>Built easy <span class="label">self-service data tools and MCP servers</span> (StarRocks, Grafana, VictoriaLogs) so AI tools and non-technical users can get data and insights on their own; also built an <span class="label">AI agent</span> (Node/TypeScript) to query and explore the data platform.</li>
-            <li>Added <span class="label">data security, access control and audit</span> to keep data safe.</li>
-            <li>Ran workloads on <span class="label">Kubernetes across three clouds</span> — GKE (GCP), EKS (AWS) and FPT Cloud — managing node pools, Helm charts, ArgoCD and Kyverno.</li>
-            <li>Worked with <span class="label">Bazel</span> to build and package services, and upgraded the whole <span class="label">monorepo from Java 11 to Java 17</span> (build config + hundreds of dependencies).</li>
-            <li>Can set up a <span class="label">full monitoring stack for Kubernetes</span> — metrics, dashboards and alerts — using VictoriaMetrics/VictoriaLogs and Grafana; managed secrets and access with SOPS and GCP Workload Identity.</li>
-            <li>Wrote platform services in <span class="label">Kotlin, Go and Python</span>.</li>
-          </ul>
-          <p class="env">Environment: Kotlin, Go, Python, TypeScript, Kubernetes (GKE/EKS/FPT Cloud), Helm, ArgoCD, Kyverno, Bazel, Pulumi, StarRocks, Kyuubi, Spark, Flink, Kafka, Debezium, Iceberg, Gravitino, HBase, Redis; GCP, AWS, FPT Cloud</p>
+    <section>
+      <h2>Experience</h2>
 
-          <h3>Java Developer</h3>
-          <p class="meta">04/2023 – 10/2023 • Shinhan DS Vietnam Ltd</p>
-          <ul>
-            <li>Built backend APIs for an internal HRMS (Employee Management, Leave &amp; Attendance, Payroll, etc.) using Java, Spring Boot, Spring Data JPA.</li>
-            <li>Set up a CI/CD pipeline (Jenkins, Docker, Apache on CentOS) for the test environment.</li>
-            <li>Worked on a BigCommerce admin site (Madive) and took part in team code reviews.</li>
-          </ul>
+      <h3>Software Engineer → Data Platform / Cloud Infrastructure Engineer</h3>
+      <p class="meta">Nov 2023 – present • MoMo (M_Service JSC), Vietnam</p>
+      <p>Started as a junior software engineer building app features, then moved into designing and running MoMo's data platform used by many teams.</p>
+      <p class="label">Product work (early)</p>
+      <ul>
+        <li>Built MoMo's in-app <span class="label">survey feature</span> end to end, from the admin setup to the screens in the app. Added <span class="label">extensible question types</span>, survey versions, next-question logic, and reports with charts and export, and sent the survey data to Kafka and StarRocks. <em>(Kotlin, Kafka, StarRocks)</em></li>
+        <li>Built the backend for the <span class="label">Lắc Xì 2024</span> Tết game, made to handle <span class="label">very high traffic and many users at the same time</span>: game logic, caching, a global lock, maintenance mode, event/chat sending, and a back-office config tool. <em>(Vert.x, Kotlin, HBase, Redis, Kafka)</em></li>
+      </ul>
+      <p class="label">Data platform work</p>
+      <ul>
+        <li><span class="label">Designed the data platform architecture</span> — how it is deployed, how the clusters are set up, and how people access data.</li>
+        <li>Was the <span class="label">first engineer</span> to research and build the deployment pipeline for the data platform.</li>
+        <li>Also worked as a <span class="label">DevOps engineer</span> for a while: supported CI/CD, networking, and troubleshooting of multi-cluster networking, and operated several open-source stacks (Postgres, VictoriaMetrics + Grafana).</li>
+        <li>Liked to <span class="label">try and apply new tools</span> — tested new open-source tech and brought the good ones into production for the company.</li>
+        <li>Brought an <span class="label">open-source lakehouse</span> to the company (StarRocks, Apache Kyuubi, Spark, Iceberg, Gravitino, Hive Metastore) to run data pipelines and build a <span class="label">feature mart</span> for ML.</li>
+        <li>Enabled <span class="label">BI and blazing-fast, real-time dashboards</span> that help the business make decisions in real time.</li>
+        <li><span class="label">Helped many teams go live</span> — set them up on the platform and gave them the tools and support to ship to production.</li>
+        <li>Set up and ran <span class="label">multi-cluster Apache Flink</span> and streaming/CDC pipelines (Kafka, Debezium) for several teams.</li>
+        <li>Served many kinds of users — developers, data analysts, data scientists and product owners.</li>
+        <li>Built easy <span class="label">self-service data tools and MCP servers</span> (StarRocks, Grafana, VictoriaLogs) so AI tools and non-technical users can get data and insights on their own; also built an <span class="label">AI agent</span> (Node/TypeScript) to query and explore the data platform.</li>
+        <li>Added <span class="label">data security, access control and audit</span> to keep data safe.</li>
+        <li>Ran workloads on <span class="label">Kubernetes across three clouds</span> — GKE (GCP), EKS (AWS) and FPT Cloud — managing node pools, Helm charts, ArgoCD and Kyverno.</li>
+        <li>Worked with <span class="label">Bazel</span> to build and package services, and upgraded the whole <span class="label">monorepo from Java 11 to Java 17</span> (build config + hundreds of dependencies).</li>
+        <li>Can set up a <span class="label">full monitoring stack for Kubernetes</span> — metrics, dashboards and alerts — using VictoriaMetrics/VictoriaLogs and Grafana; managed secrets and access with SOPS and GCP Workload Identity.</li>
+        <li>Wrote platform services in <span class="label">Kotlin, Go and Python</span>.</li>
+      </ul>
+      <p class="env">Environment: Kotlin, Go, Python, TypeScript, Kubernetes (GKE/EKS/FPT Cloud), Helm, ArgoCD, Kyverno, Bazel, Pulumi, StarRocks, Kyuubi, Spark, Flink, Kafka, Debezium, Iceberg, Gravitino, HBase, Redis; GCP, AWS, FPT Cloud</p>
 
-          <h3>Developer Internship</h3>
-          <p class="meta">12/2022 – 03/2023 • LIKELION Co., LTD.</p>
-          <ul>
-            <li>Contribute to Spring Boot web application development.</li>
-            <li>Server-side rendering web using Java, Thymeleaf, HTML, jQuery, Bootstrap.</li>
-            <li>Build small project with team of 5 members.</li>
-            <li>Learning new technology: Docker, Redis, Microservices.</li>
-          </ul>
-        </section>
+      <h3>Java Developer</h3>
+      <p class="meta">04/2023 – 10/2023 • Shinhan DS Vietnam Ltd</p>
+      <ul>
+        <li>Built backend APIs for an internal HRMS (Employee Management, Leave &amp; Attendance, Payroll, etc.) using Java, Spring Boot, Spring Data JPA.</li>
+        <li>Set up a CI/CD pipeline (Jenkins, Docker, Apache on CentOS) for the test environment.</li>
+        <li>Worked on a BigCommerce admin site (Madive) and took part in team code reviews.</li>
+      </ul>
 
-        <section>
-          <h2>Personal Projects</h2>
-          <h3>Chat Application</h3>
-          <ul>
-            <li>Github: <a href="https://github.com/vanphuoc3012/chat-application">github.com/vanphuoc3012/chat-application</a></li>
-            <li>A realtime Chat Application: send messages, create chat groups.</li>
-            <li>RabbitMQ as STOMP broker; Redis as in-memory session store.</li>
-          </ul>
-          <p class="env">Environment: Java 11, Spring Boot, Docker, RabbitMQ, Redis, Oracle Database</p>
+      <h3>Developer Internship</h3>
+      <p class="meta">12/2022 – 03/2023 • LIKELION Co., LTD.</p>
+      <ul>
+        <li>Contribute to Spring Boot web application development.</li>
+        <li>Server-side rendering web using Java, Thymeleaf, HTML, jQuery, Bootstrap.</li>
+        <li>Build small project with team of 5 members.</li>
+        <li>Learning new technology: Docker, Redis, Microservices.</li>
+      </ul>
+    </section>
 
-          <h3>Ecommerce – Laptop shopping website</h3>
-          <ul>
-            <li>Github: <a href="https://github.com/vanphuoc3012/xplaptop_web">github.com/vanphuoc3012/xplaptop_web</a></li>
-            <li>A shopping website that lets customers browse products and place orders.</li>
-            <li>An admin application for managing users, categories, brands, products, customers, orders and sales reports.</li>
-          </ul>
-          <p class="env">Environment: Java 11, Spring Boot, MySQL</p>
-        </section>
-      </div>
+    <section>
+      <h2>Personal Projects</h2>
+      <h3>Chat Application</h3>
+      <ul>
+        <li>Github: <a href="https://github.com/vanphuoc3012/chat-application">github.com/vanphuoc3012/chat-application</a></li>
+        <li>A realtime Chat Application: send messages, create chat groups.</li>
+        <li>RabbitMQ as STOMP broker; Redis as in-memory session store.</li>
+      </ul>
+      <p class="env">Environment: Java 11, Spring Boot, Docker, RabbitMQ, Redis, Oracle Database</p>
 
-      <!-- RIGHT COLUMN -->
-      <aside class="side">
-        <section>
-          <h2>Profile</h2>
-          <ul class="contact">
-            <li><i class="fa-regular fa-envelope"></i> <a href="mailto:vanphuoc3012@gmail.com">vanphuoc3012@gmail.com</a></li>
-            <li><i class="fa-solid fa-phone"></i> (+84) 34 441 5562</li>
-            <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/">LinkedIn</a></li>
-            <li><i class="fa-solid fa-location-dot"></i> Ho Chi Minh City</li>
-            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/vanphuoc3012">Github</a></li>
-          </ul>
-        </section>
+      <h3>Ecommerce – Laptop shopping website</h3>
+      <ul>
+        <li>Github: <a href="https://github.com/vanphuoc3012/xplaptop_web">github.com/vanphuoc3012/xplaptop_web</a></li>
+        <li>A shopping website that lets customers browse products and place orders.</li>
+        <li>An admin application for managing users, categories, brands, products, customers, orders and sales reports.</li>
+      </ul>
+      <p class="env">Environment: Java 11, Spring Boot, MySQL</p>
+    </section>
 
-        <section>
-          <h2>Skills</h2>
-          <p class="skill"><span class="label">Languages:</span> Java, Kotlin, Go, Python, TypeScript</p>
-          <p class="skill"><span class="label">Data &amp; Lakehouse:</span> StarRocks, Spark, Kyuubi, Flink, Kafka, Iceberg</p>
-          <p class="skill"><span class="label">Cloud &amp; DevOps:</span> Kubernetes (GKE/EKS), Docker, Helm, ArgoCD, Bazel, Pulumi</p>
-          <p class="skill"><span class="label">Databases:</span> PostgreSQL, MySQL, Redis, HBase</p>
-          <p class="skill"><span class="label">Monitoring:</span> VictoriaMetrics, Grafana</p>
-          <p class="skill"><span class="label">Others:</span> Git, CI/CD, CCNA</p>
-          <p class="skill"><span class="label">Spoken:</span> Vietnamese, English</p>
-        </section>
+    <section>
+      <h2>Extra Curricular</h2>
+      <h3>Leadership in University</h3>
+      <p class="meta">2017 – 2020</p>
+      <p>Deputy Secretary of the Youth Union &amp; Faculty Students' Association; organized a Careers Expo, academic contests and volunteer campaigns.</p>
+    </section>
 
-        <section>
-          <h2>Extra Curricular</h2>
-          <h3>Leadership in University</h3>
-          <p class="meta">2017 – 2020</p>
-          <p>Deputy Secretary of the Youth Union &amp; Faculty Students' Association; organized a Careers Expo, academic contests and volunteer campaigns.</p>
-        </section>
-
-        <section>
-          <h2>Achievements &amp; Certificates</h2>
-          <ul class="trophy">
-            <li><span class="label">Jun 2022</span> — Completed CCNA class at VNPRO Center.</li>
-            <li><span class="label">Apr 2018</span> — 1st prize, National Chemistry Olympiad for Students 2018.</li>
-          </ul>
-        </section>
-      </aside>
-    </div>
+    <section>
+      <h2>Achievements &amp; Certificates</h2>
+      <ul class="trophy">
+        <li><span class="label">Jun 2022</span> — Completed CCNA class at VNPRO Center.</li>
+        <li><span class="label">Apr 2018</span> — 1st prize, National Chemistry Olympiad for Students 2018.</li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
