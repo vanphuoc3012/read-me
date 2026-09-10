@@ -5,7 +5,7 @@
 
 - **Email:** vanphuoc3012@gmail.com
 - **Phone:** (+84) 34 441 5562
-- **LinkedIn:** LinkedIn
+- **LinkedIn:** https://www.linkedin.com/in/phuoc-ho-van/
 - **Location:** Ho Chi Minh City
 - **Github:** Github
 
