@@ -53,7 +53,7 @@ Started as a junior software engineer building app features, then moved into des
 - **Helped many teams go live** — set them up on the platform and gave them the tools and support to ship to production.
 - Set up and ran **multi-cluster Apache Flink** and streaming/CDC pipelines (Kafka, Debezium) for several teams.
 - Provided a **secure, self-service data environment** enabling developers, data analysts, data scientists and product owners to access, analyze and act on data for decision-making.
-- Built easy **self-service data tools and MCP servers** (StarRocks, Grafana, VictoriaLogs) so AI tools and non-technical users can get data and insights on their own; also built an **AI agent** (Node/TypeScript) to query and explore the data platform.
+- **Designed and implemented multiple secure MCP (Model Context Protocol) services** — for StarRocks, Grafana and VictoriaLogs — together with an **MCP gateway** solution, giving AI assistants and non-technical users safe, self-service access to data and insights; also built an **AI agent** (Node/TypeScript) to query and explore the data platform.
 - Added **data security, access control and audit** to keep data safe.
 - Ran workloads on **Kubernetes across three clouds** — GKE (GCP), EKS (AWS) and FPT Cloud — managing node pools, Helm charts, ArgoCD and Kyverno.
 - Worked with **Bazel** to build and package services.
