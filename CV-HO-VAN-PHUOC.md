@@ -40,7 +40,7 @@ GPA: 8.0/10
 Started as a junior software engineer building app features, then moved into designing and running MoMo's data platform used by many teams.
 
 **Product work (early)**
-- Built MoMo's in-app **survey feature** end to end — from the admin config to the screens shown in the MoMo app. Added question types (Radio, Dropdown, NPS), survey versions, next-question logic, reports with charts and export, and sent survey data to Kafka and StarRocks. *(Kotlin, Kafka, StarRocks)*
+- Built MoMo's in-app **survey feature** end to end, from the admin setup to the screens in the app. Added **extensible question types**, survey versions, next-question logic, and reports with charts and export, and sent the survey data to Kafka and StarRocks. *(Kotlin, Kafka, StarRocks)*
 - Built the backend for the **Lắc Xì 2024** Tết game, made to handle **very high traffic and many users at the same time**: game logic, caching, a global lock, maintenance mode, event/chat sending, and a back-office config tool. *(Vert.x, Kotlin, HBase, Redis, Kafka)*
 
 **Data platform work**
