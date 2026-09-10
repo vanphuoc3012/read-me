@@ -61,3 +61,23 @@ embedded Vue.js.
 - Leading in recurring volunteer campaign: Spring & Green Summer Campaign.
 
 *(Condensed to ~2 lines in the final CV.)*
+
+---
+
+## Personal Projects — removed from the final CV
+
+### Chat Application
+- Github: github.com/vanphuoc3012/chat-application
+- A realtime Chat Application: send messages, create chat groups.
+- RabbitMQ as STOMP broker; Redis as in-memory session store.
+
+*Environment: Java 11, Spring Boot, Docker, RabbitMQ, Redis, Oracle Database*
+
+### Ecommerce – Laptop shopping website
+- Github: github.com/vanphuoc3012/xplaptop_web
+- A shopping website that lets customers browse products and place orders.
+- An admin application for managing users, categories, brands, products, customers, orders and sales reports.
+
+*Environment: Java 11, Spring Boot, MySQL*
+
+*(Removed — entry-level student projects, superseded by professional experience. Add back or swap for a data/AI project if needed.)*

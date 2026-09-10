@@ -52,13 +52,13 @@ Started as a junior software engineer building app features, then moved into des
 - Enabled **BI and blazing-fast, real-time dashboards** that help the business make decisions in real time.
 - **Helped many teams go live** — set them up on the platform and gave them the tools and support to ship to production.
 - Set up and ran **multi-cluster Apache Flink** and streaming/CDC pipelines (Kafka, Debezium) for several teams.
-- Served many kinds of users — developers, data analysts, data scientists and product owners.
+- Provided a **secure, self-service data environment** enabling developers, data analysts, data scientists and product owners to access, analyze and act on data for decision-making.
 - Built easy **self-service data tools and MCP servers** (StarRocks, Grafana, VictoriaLogs) so AI tools and non-technical users can get data and insights on their own; also built an **AI agent** (Node/TypeScript) to query and explore the data platform.
 - Added **data security, access control and audit** to keep data safe.
 - Ran workloads on **Kubernetes across three clouds** — GKE (GCP), EKS (AWS) and FPT Cloud — managing node pools, Helm charts, ArgoCD and Kyverno.
 - Worked with **Bazel** to build and package services.
 - Upgraded the whole **monorepo from Java 11 to Java 17**, updating the build config and hundreds of dependencies.
-- Can set up a **full monitoring stack for Kubernetes** — metrics, dashboards and alerts — using VictoriaMetrics/VictoriaLogs and Grafana; managed secrets and access with SOPS and GCP Workload Identity.
+- Built and operate a **complete Kubernetes observability stack** — metrics, logs, dashboards and alerting — with VictoriaMetrics, VictoriaLogs and Grafana; manage secrets and access using SOPS and GCP Workload Identity Federation.
 - Wrote platform services in **Kotlin, Go and Python**.
 
 *Environment: Kotlin, Go, Python, TypeScript, Kubernetes (GKE/EKS/FPT Cloud), Helm, ArgoCD, Kyverno, Bazel, Pulumi, StarRocks, Kyuubi, Spark, Flink, Kafka, Debezium, Iceberg, Gravitino, HBase, Redis; GCP, AWS, FPT Cloud*
@@ -77,26 +77,6 @@ Started as a junior software engineer building app features, then moved into des
 - Server side rendering web using: Java, Thymeleaf, HTML, jQuery, Bootstrap
 - Build small project with team of 5 members
 - Learning new technology: Docker, Redis, Microservices
-
----
-
-## Personal Projects
-
-### Chat Application
-- Github: github.com/vanphuoc3012/chat-application
-- A realtime Chat Application, send message, create chat group…
-- RabbitMQ as STOMP broker
-- Redis as in-memroy database to store session
-
-*Environment: Java 11, Spring Boot, Docker, RabbitMQ, Redis, Oracle Database*
-
-### Ecommerce – Laptop shopping website
-Description:
-- Github: github.com/vanphuoc3012/xplaptop_web
-- A Shopping website allow customers to browse products and place orders.
-- An Admin application for managing users, categories, brands, products, customers, orders, sales report..
-
-*Environment: Java 11, Spring Boot, MySQL*
 
 ---
 
